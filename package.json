@@ -1,0 +1,111 @@
+{
+  "name": "@sonia-corporation/conventional-changelog",
+  "version": "0.0.0",
+  "author": {
+    "email": "geoffrey.testelin@gmail.com",
+    "name": "Geoffrey 'C0ZEN' Testelin",
+    "url": "https://github.com/C0ZEN"
+  },
+  "contributors": [
+    {
+      "email": "geoffrey.testelin@gmail.com",
+      "name": "Geoffrey 'C0ZEN' Testelin",
+      "url": "https://github.com/C0ZEN"
+    }
+  ],
+  "description": "Sonia Conventional Changelog for Semantic Release",
+  "homepage": "https://github.com/Sonia-corporation/conventional-changelog",
+  "maintainers": [
+    {
+      "email": "geoffrey.testelin@gmail.com",
+      "name": "Geoffrey 'C0ZEN' Testelin",
+      "url": "https://github.com/C0ZEN"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "sonia",
+    "conventional-changelog",
+    "javascript",
+    "semantic-release"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sonia-corporation/conventional-changelog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sonia-corporation/conventional-changelog/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./scripts/commitizen.js"
+    }
+  },
+  "private": false,
+  "files": [
+    "templates",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "conventional-changelog.js",
+    "conventional-recommended-bump.js",
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "package-lock.json",
+    "parser-opts.js",
+    "README.md",
+    "writer-opts.js"
+  ],
+  "main": "./index.js",
+  "scripts": {
+    "\n# LINT SCRIPTS:": "",
+    "lint": "eslint --fix --ext .js,.ts --cache scripts/ src/ jest.config.js config.ts",
+    "lint:ci": "eslint --ext .js,.ts scripts/ src/ jest.config.js config.ts",
+    "\n# UTILS SCRIPTS:": "",
+    "commitmsg": "cz-customizable-ghooks",
+    "cz": "git add . && git-cz && npm run git:push",
+    "semver": "semantic-release",
+    "commit": "npm run cz",
+    "git:push": "git push-upstream"
+  },
+  "dependencies": {
+    "compare-func": "2.0.0",
+    "q": "1.5.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/git": "9.0.0",
+    "@semantic-release/github": "7.0.7",
+    "@typescript-eslint/eslint-plugin": "3.1.0",
+    "@typescript-eslint/parser": "3.1.0",
+    "commitizen": "4.1.2",
+    "cz-customizable": "6.2.0",
+    "cz-customizable-ghooks": "1.5.0",
+    "eslint": "7.1.0",
+    "eslint-config-google": "0.14.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-config-recommended": "4.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jest": "23.13.2",
+    "eslint-plugin-prettier": "3.1.3",
+    "eslint-plugin-rxjs": "0.0.2-beta.24",
+    "eslint-plugin-typescript-sort-keys": "1.2.0",
+    "husky": "4.2.5",
+    "jest": "26.0.1",
+    "jest-silent-reporter": "0.2.1",
+    "jest-ts-auto-mock": "1.0.11",
+    "lint-staged": "10.2.7",
+    "prettier": "2.0.5",
+    "semantic-release": "17.0.8",
+    "ts-auto-mock": "2.2.5",
+    "ts-jest": "26.1.0",
+    "ts-node-dev": "1.0.0-pre.44",
+    "tsconfig-paths": "3.9.0",
+    "ttypescript": "1.5.10",
+    "typescript": "3.9.3"
+  }
+}

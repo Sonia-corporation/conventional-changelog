@@ -1,0 +1,25 @@
+{
+  "extends": [
+    ":enableRenovate",
+    ":semanticCommits",
+    ":prHourlyLimitNone",
+    ":prConcurrentLimitNone",
+    ":separateMultipleMajorReleases",
+    ":separatePatchReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":semanticCommitTypeAll(chore)",
+    ":updateNotScheduled",
+    ":automergeDisabled",
+    ":enableVulnerabilityAlerts",
+    ":assignAndReview(C0ZEN)",
+    ":ignoreModulesAndTests",
+    ":maintainLockFilesDisabled",
+    ":pinVersions",
+    ":autodetectPinVersions",
+    "group:monorepos",
+    "group:recommended",
+    "helpers:disableTypesNodeMajor"
+  ],
+  "assignAutomerge": true
+}
