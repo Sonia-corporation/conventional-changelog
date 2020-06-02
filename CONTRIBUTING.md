@@ -9,31 +9,11 @@ It will also create the Git hooks with Husky if you Git version is recent enough
 
 ## Package scripts
 
-- `npm run start`: run the Node.js app for the local development  
-- `npm run start:prod`: build and run the Node.js app like it will be once deployed in the server for local development or server debugging  
-- `npm run build`: create a Node.js app in the dist folder  
-- `npm run build:environment:copy`: copy the secret environment file inside the dist folder  
-- `npm run build:environment:create`: create the environment file inside the dist folder with some default values used for the CI 
-- `npm run build:environment:rewrite-path`: rename the environment file path of the Node.js app inside the dist folder  
-- `npm run build:update-app-initialization-date`: update the app initialization date inside the environment file from the dist folder  
-- `npm run run:prod`: run the Node.js app like it will be once deployed in the server for local development or server debugging  
-- `npm run tsc`: compile the TypeScript app to Node.js app  
-- `npm run test`: run the tests once  
-- `npm run test:watch`: run the tests and watch them  
-- `npm run test:watch:no-cache`: run the tests and watch them without cache 
-- `npm run test:majestic`: run the tests in the browser (beautiful UI)
-- `npm run test:ci`: run the tests once and stop asap on error 
-- `npm run test:ci:coverage`: run the tests once with code coverage and stop asap on error 
-- `npm run test:mutant`: run the mutation testing once
-- `npm run test:mutant:ci`: run the mutation testing once and update Stryker dashboard
-- `npm run test:clear-cache`: remove the Jest cache
 - `npm run lint`: run the linter and fix the errors  
 - `npm run lint:ci`: run the linter  
 - `npm run cz`: run a CLI to easily push and commit by following the commit convention of this project  
 - `npm run semver`: create a new version, a new tag and update the [CHANGELOG](CHANGELOG.md) file  
-- `npm run clean:dist`: remove the dist folder  
 - `npm run commit`: create a commit by using the cz
-- `npm run create-secret-environment`: create the secret-environment.json file
 
 ## Git
 
