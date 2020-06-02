@@ -6,7 +6,6 @@ __Quality:__
 ![GitHub last commit](https://img.shields.io/github/last-commit/sonia-corporation/conventional-changelog?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues-raw/sonia-corporation/conventional-changelog?style=flat-square)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/sonia-corporation/conventional-changelog?style=flat-square)
-![Build](https://github.com/Sonia-corporation/conventional-changelog/workflows/Build/badge.svg?style=flat-square)
 ![Release](https://github.com/Sonia-corporation/conventional-changelog/workflows/Release/badge.svg?style=flat-square)
 ![Dependencies](https://img.shields.io/david/sonia-corporation/conventional-changelog?style=flat-square)
 ![Dev Dependencies](https://img.shields.io/david/dev/sonia-corporation/conventional-changelog?style=flat-square)

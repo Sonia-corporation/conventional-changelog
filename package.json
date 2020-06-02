@@ -63,8 +63,8 @@
   "main": "./index.js",
   "scripts": {
     "\n# LINT SCRIPTS:": "",
-    "lint": "eslint --fix --ext .js,.ts --cache scripts/ src/ jest.config.js config.ts",
-    "lint:ci": "eslint --ext .js,.ts scripts/ src/ jest.config.js config.ts",
+    "lint": "eslint --fix --ext .js,.ts --cache scripts/ jest.config.js writer-opts.js parser-opts.js conventional-recommended-bump.js conventional-changelog.js index.js",
+    "lint:ci": "eslint --ext .js,.ts scripts/ jest.config.js writer-opts.js parser-opts.js conventional-recommended-bump.js conventional-changelog.js index.js",
     "\n# UTILS SCRIPTS:": "",
     "commitmsg": "cz-customizable-ghooks",
     "cz": "git add . && git-cz && npm run git:push",

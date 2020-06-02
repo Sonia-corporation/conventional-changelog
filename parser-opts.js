@@ -1,13 +1,9 @@
-'use strict'
+"use strict";
 
 module.exports = {
+  headerCorrespondence: [`type`, `scope`, `subject`],
   headerPattern: /^(\w*)(?:\((.*)\))?: (.*)$/,
-  headerCorrespondence: [
-    'type',
-    'scope',
-    'subject'
-  ],
-  noteKeywords: ['BREAKING CHANGE'],
+  noteKeywords: [`BREAKING CHANGE`],
+  revertCorrespondence: [`header`, `hash`],
   revertPattern: /^(?:Revert|revert:)\s"?([\s\S]+?)"?\s*This reverts commit (\w*)\./i,
-  revertCorrespondence: ['header', 'hash']
-}
+};

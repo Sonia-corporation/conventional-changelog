@@ -1,0 +1,59 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowJs": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true,
+    "baseUrl": "./",
+    "importHelpers": true,
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@types/",
+      "types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "transform": "ts-auto-mock/transformer",
+        "cacheBetweenTests": false
+      }
+    ]
+  },
+  "include": [
+    "./scripts/**/*.js",
+    "./jest.config.js",
+    "./writer-opts.js",
+    "./parser-opts.js",
+    "./conventional-recommended-bump.js",
+    "./conventional-changelog.js",
+    "./index.js"
+  ],
+  "exclude": [
+    "./src/**.*.spec.ts"
+  ]
+}
