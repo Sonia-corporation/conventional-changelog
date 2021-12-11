@@ -1,8 +1,8 @@
 # Sonia Conventional Changelog
 
-> *Sonia Conventional Changelog for Semantic Release*
+> _Sonia Conventional Changelog for Semantic Release_
 
-__Quality:__  
+**Quality:**  
 ![GitHub last commit](https://img.shields.io/github/last-commit/sonia-corporation/conventional-changelog?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues-raw/sonia-corporation/conventional-changelog?style=flat-square)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/sonia-corporation/conventional-changelog?style=flat-square)
@@ -12,12 +12,12 @@ __Quality:__
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-__Community:__  
+**Community:**  
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 [![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
 
-__Statistics:__  
+**Statistics:**  
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/sonia-corporation/conventional-changelog?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/sonia-corporation/conventional-changelog?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/sonia-corporation/conventional-changelog?style=flat-square)
@@ -28,6 +28,11 @@ __Statistics:__
 
 Based on [conventional-changelog-angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular).
 
+## Additional features
+
+- Emojis in front of the section titles
+- Display the commit's body
+
 ## Contributing
 
 Check out the [contributing](CONTRIBUTING.md) file before helping us.
@@ -36,7 +41,7 @@ Check out the [contributing](CONTRIBUTING.md) file before helping us.
 
 This project is licensed under the MIT License - see the [license](LICENSE.md) for details.
 
-## Contributors 
+## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
@@ -54,8 +59,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.  
 Contributions of any kind are welcome!
-
