@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/Sonia-corporation/conventional-changelog/compare/1.0.1...1.1.0) (2021-12-11)
+
+
+### Features
+
+* **commit:** display the body of the commit ([d467045](https://github.com/Sonia-corporation/conventional-changelog/commit/d4670457fbe125433735e7cd8424bbbc4a4f0081))
+
 ## [1.0.1](https://github.com/Sonia-corporation/conventional-changelog/compare/1.0.0...1.0.1) (2020-06-02)
 
 
