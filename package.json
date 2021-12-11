@@ -44,6 +44,9 @@
       "config": "./scripts/commitizen.js"
     }
   },
+  "engines": {
+    "npm": "7.24.2"
+  },
   "private": false,
   "files": [
     "templates",
