@@ -108,7 +108,7 @@
     "ts-jest": "26.3.0",
     "ts-node-dev": "1.0.0-pre.63",
     "tsconfig-paths": "3.11.0",
-    "ttypescript": "1.5.11",
+    "ttypescript": "1.5.13",
     "typescript": "4.0.3"
   }
 }
