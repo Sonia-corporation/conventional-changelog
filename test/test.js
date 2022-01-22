@@ -124,7 +124,7 @@ describe(`angular preset`, function () {
           expect(chunk).to.include(`**compile:** avoid a bug`);
           expect(chunk).to.include(`make it faster`);
           expect(chunk).to.include(
-            `, closes [#1](https://github.com/conventional-changelog/conventional-changelog/issues/1) [#2](https://github.com/conventional-changelog/conventional-changelog/issues/2)`
+            `, closes [#1](https://github.com/Sonia-corporation/conventional-changelog/issues/1) [#2](https://github.com/Sonia-corporation/conventional-changelog/issues/2)`
           );
           expect(chunk).to.include(`New build system.`);
           expect(chunk).to.include(`Not backward compatible.`);
@@ -164,7 +164,7 @@ describe(`angular preset`, function () {
         through(function (chunk) {
           chunk = chunk.toString();
           expect(chunk).to.include(
-            `[#133](https://github.com/conventional-changelog/conventional-changelog/issues/133)`
+            `[#133](https://github.com/Sonia-corporation/conventional-changelog/issues/133)`
           );
           done();
         })
@@ -184,10 +184,10 @@ describe(`angular preset`, function () {
         through(function (chunk) {
           chunk = chunk.toString();
           expect(chunk).to.include(
-            `[#88](https://github.com/conventional-changelog/conventional-changelog/issues/88)`
+            `[#88](https://github.com/Sonia-corporation/conventional-changelog/issues/88)`
           );
           expect(chunk).to.not.include(
-            `closes [#88](https://github.com/conventional-changelog/conventional-changelog/issues/88)`
+            `closes [#88](https://github.com/Sonia-corporation/conventional-changelog/issues/88)`
           );
           done();
         })
@@ -318,13 +318,13 @@ describe(`angular preset`, function () {
             chunk = chunk.toString();
 
             expect(chunk).to.include(
-              `(https://github.com/conventional-changelog/example/compare`
+              `(https://github.com/Sonia-corporation/example/compare`
             );
             expect(chunk).to.include(
-              `](https://github.com/conventional-changelog/example/commit/`
+              `](https://github.com/Sonia-corporation/example/commit/`
             );
             expect(chunk).to.include(
-              `](https://github.com/conventional-changelog/example/issues/`
+              `](https://github.com/Sonia-corporation/example/issues/`
             );
 
             i++;
@@ -354,13 +354,13 @@ describe(`angular preset`, function () {
             chunk = chunk.toString();
 
             expect(chunk).to.include(
-              `(https://github.com/conventional-changelog/conventional-changelog/compare`
+              `(https://github.com/Sonia-corporation/conventional-changelog/compare`
             );
             expect(chunk).to.include(
-              `](https://github.com/conventional-changelog/conventional-changelog/commit/`
+              `](https://github.com/Sonia-corporation/conventional-changelog/commit/`
             );
             expect(chunk).to.include(
-              `](https://github.com/conventional-changelog/conventional-changelog/issues/`
+              `](https://github.com/Sonia-corporation/conventional-changelog/issues/`
             );
 
             i++;
@@ -392,16 +392,16 @@ describe(`angular preset`, function () {
 
           expect(chunk).to.include(`(https://github.internal.example.com/dlmr`);
           expect(chunk).to.include(
-            `(https://github.internal.example.com/conventional-changelog/internal/compare`
+            `(https://github.internal.example.com/Sonia-corporation/internal/compare`
           );
           expect(chunk).to.include(
-            `](https://github.internal.example.com/conventional-changelog/internal/commit/`
+            `](https://github.internal.example.com/Sonia-corporation/internal/commit/`
           );
           expect(chunk).to.include(
-            `5](https://github.internal.example.com/conventional-changelog/internal/issues/5`
+            `5](https://github.internal.example.com/Sonia-corporation/internal/issues/5`
           );
           expect(chunk).to.include(
-            ` closes [#10](https://github.internal.example.com/conventional-changelog/internal/issues/10)`
+            ` closes [#10](https://github.internal.example.com/Sonia-corporation/internal/issues/10)`
           );
 
           done();
