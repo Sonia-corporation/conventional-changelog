@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.3.0](https://github.com/Sonia-corporation/conventional-changelog/compare/1.2.0...1.3.0) (2022-01-22)
+
+
+### Features
+
+* allow to customize which commits to write ([25f2074](https://github.com/Sonia-corporation/conventional-changelog/commit/25f2074296ea51891867c7478fdd76ee3cef5736))
+
 # [1.2.0](https://github.com/Sonia-corporation/conventional-changelog/compare/1.1.0...1.2.0) (2022-01-22)
 
 
