@@ -3,6 +3,6 @@ dist
 coverage
 .github
 .cache
-.cache-jest
 reports
 stryker-tmp
+test/tmp

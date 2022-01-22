@@ -22,19 +22,9 @@
     "resolveJsonModule": true,
     "strict": true,
     "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/@types/",
-      "types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
-    "types": [
-      "node",
-      "jest"
-    ],
+    "typeRoots": ["node_modules/@types", "node_modules/@types/", "types"],
+    "lib": ["es2018", "dom"],
+    "types": ["node"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "plugins": [
@@ -46,14 +36,11 @@
   },
   "include": [
     "./scripts/**/*.js",
-    "./jest.config.js",
     "./writer-opts.js",
     "./parser-opts.js",
     "./conventional-recommended-bump.js",
     "./conventional-changelog.js",
     "./index.js"
   ],
-  "exclude": [
-    "./src/**.*.spec.ts"
-  ]
+  "exclude": ["./src/**.*.spec.ts"]
 }
