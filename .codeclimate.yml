@@ -30,7 +30,6 @@ plugins:
     channel: "eslint-6"
     exclude_patterns:
       - ".cache/"
-      - ".cache-jest/"
       - "coverage/"
       - "node_modules/"
       - ".eslintcache"
@@ -40,7 +39,6 @@ plugins:
       - "!scripts/**/*.js"
 exclude_patterns:
   - ".cache/"
-  - ".cache-jest/"
   - "coverage/"
   - "node_modules/"
   - ".eslintcache"
