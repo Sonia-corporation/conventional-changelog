@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+# [1.2.0](https://github.com/Sonia-corporation/conventional-changelog/compare/1.1.0...1.2.0) (2022-01-22)
+
+
+### Features
+
+* **docs:** add an emoji for the docs type ([ddfce34](https://github.com/Sonia-corporation/conventional-changelog/commit/ddfce3464038f706a86ea883cf13c9c54795a57c))
+
 # [1.1.0](https://github.com/Sonia-corporation/conventional-changelog/compare/1.0.1...1.1.0) (2021-12-11)
 
 
