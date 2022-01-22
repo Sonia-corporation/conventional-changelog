@@ -1,15 +1,16 @@
 name: Stale
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
 jobs:
   Stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/stale@v1
+      - uses: sonia-corporation/stale@1.29.0
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          stale-issue-message: 'Stale issue message'
-          stale-pr-message: 'Stale pull request message'
-          stale-issue-label: 'no-issue-activity'
-          stale-pr-label: 'no-pr-activity'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-stale-comment: Stale issue message
+          pull-request-stale-comment: Stale pull request message
+          issue-stale-label: no-issue-activity
+          pull-request-stale-label: no-pr-activity

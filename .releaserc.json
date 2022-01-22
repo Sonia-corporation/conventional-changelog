@@ -1,7 +1,5 @@
 {
-  "branches": [
-    "master"
-  ],
+  "branches": ["master"],
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
@@ -19,14 +17,14 @@
           {
             "type": "perf",
             "release": "patch"
+          },
+          {
+            "type": "docs",
+            "release": "minor"
           }
         ],
         "parserOpts": {
-          "noteKeywords": [
-            "BREAKING CHANGE",
-            "BREAKING CHANGES",
-            "BREAKING"
-          ]
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
         }
       }
     ],
@@ -35,17 +33,10 @@
       {
         "config": "angular",
         "parserOpts": {
-          "noteKeywords": [
-            "BREAKING CHANGE",
-            "BREAKING CHANGES",
-            "BREAKING"
-          ]
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
         },
         "writerOpts": {
-          "commitsSort": [
-            "subject",
-            "scope"
-          ],
+          "commitsSort": ["subject", "scope"],
           "owner": "C0ZEN"
         },
         "linkCompare": true,
@@ -70,11 +61,7 @@
     [
       "@semantic-release/git",
       {
-        "assets": [
-          "package.json",
-          "package-lock.json",
-          "CHANGELOG.md"
-        ],
+        "assets": ["package.json", "package-lock.json", "CHANGELOG.md"],
         "message": "build(release): new version ${nextRelease.version}"
       }
     ],
