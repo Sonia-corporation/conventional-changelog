@@ -48,7 +48,7 @@ function getWriterOpts() {
       } else if (shouldDiscard) {
         return;
       } else if (commit.type === `docs`) {
-        commit.type = `Documentation`;
+        commit.type = `:books: Documentation`;
       } else if (commit.type === `style`) {
         commit.type = `Styles`;
       } else if (commit.type === `refactor`) {
