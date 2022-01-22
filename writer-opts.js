@@ -5,23 +5,29 @@ const Q = require(`q`);
 const readFile = Q.denodeify(require(`fs`).readFile);
 const resolve = require(`path`).resolve;
 
-module.exports = Q.all([
-  readFile(resolve(__dirname, `./templates/template.hbs`), `utf-8`),
-  readFile(resolve(__dirname, `./templates/header.hbs`), `utf-8`),
-  readFile(resolve(__dirname, `./templates/commit.hbs`), `utf-8`),
-  readFile(resolve(__dirname, `./templates/footer.hbs`), `utf-8`),
-]).spread((template, header, commit, footer) => {
-  const writerOpts = getWriterOpts();
+module.exports = function (config) {
+  config = defaultConfig(config);
 
-  writerOpts.mainTemplate = template;
-  writerOpts.headerPartial = header;
-  writerOpts.commitPartial = commit;
-  writerOpts.footerPartial = footer;
+  return Q.all([
+    readFile(resolve(__dirname, `./templates/template.hbs`), `utf-8`),
+    readFile(resolve(__dirname, `./templates/header.hbs`), `utf-8`),
+    readFile(resolve(__dirname, `./templates/commit.hbs`), `utf-8`),
+    readFile(resolve(__dirname, `./templates/footer.hbs`), `utf-8`),
+  ]).spread((template, header, commit, footer) => {
+    const writerOpts = getWriterOpts(config);
 
-  return writerOpts;
-});
+    writerOpts.mainTemplate = template;
+    writerOpts.headerPartial = header;
+    writerOpts.commitPartial = commit;
+    writerOpts.footerPartial = footer;
 
-function getWriterOpts() {
+    return writerOpts;
+  });
+};
+
+function getWriterOpts(config) {
+  config = defaultConfig(config);
+
   return {
     commitGroupsSort: `title`,
     commitsSort: [`scope`, `subject`],
@@ -37,28 +43,59 @@ function getWriterOpts() {
         shouldDiscard = false;
       });
 
-      if (commit.type === `feat`) {
+      if (
+        commit.type === `feat` &&
+        (!shouldDiscard || config.types.includes(`feat`))
+      ) {
         commit.type = `:rocket: Features`;
-      } else if (commit.type === `fix`) {
+      } else if (
+        commit.type === `fix` &&
+        (!shouldDiscard || config.types.includes(`fix`))
+      ) {
         commit.type = `:bug: Bug Fixes`;
-      } else if (commit.type === `perf`) {
+      } else if (
+        commit.type === `perf` &&
+        (!shouldDiscard || config.types.includes(`perf`))
+      ) {
         commit.type = `:zap: Performance Improvements`;
-      } else if (commit.type === `revert` || commit.revert) {
+      } else if (
+        (commit.type === `revert` &&
+          (!shouldDiscard || config.types.includes(`revert`))) ||
+        commit.revert
+      ) {
         commit.type = `:rewind: Reverts`;
+      } else if (
+        commit.type === `docs` &&
+        (!shouldDiscard || config.types.includes(`docs`))
+      ) {
+        commit.type = `:books: Documentation`;
+      } else if (
+        commit.type === `style` &&
+        (!shouldDiscard || config.types.includes(`style`))
+      ) {
+        commit.type = `:star2: Styles`;
+      } else if (
+        commit.type === `refactor` &&
+        (!shouldDiscard || config.types.includes(`refactor`))
+      ) {
+        commit.type = `:sparkles: Code Refactoring`;
+      } else if (
+        commit.type === `test` &&
+        (!shouldDiscard || config.types.includes(`test`))
+      ) {
+        commit.type = `:microscope: Tests`;
+      } else if (
+        commit.type === `build` &&
+        (!shouldDiscard || config.types.includes(`build`))
+      ) {
+        commit.type = `:wrench: Build System`;
+      } else if (
+        commit.type === `ci` &&
+        (!shouldDiscard || config.types.includes(`ci`))
+      ) {
+        commit.type = `:robot: Continuous Integration`;
       } else if (shouldDiscard) {
         return;
-      } else if (commit.type === `docs`) {
-        commit.type = `:books: Documentation`;
-      } else if (commit.type === `style`) {
-        commit.type = `Styles`;
-      } else if (commit.type === `refactor`) {
-        commit.type = `Code Refactoring`;
-      } else if (commit.type === `test`) {
-        commit.type = `Tests`;
-      } else if (commit.type === `build`) {
-        commit.type = `Build System`;
-      } else if (commit.type === `ci`) {
-        commit.type = `Continuous Integration`;
       }
 
       if (commit.scope === `*`) {
@@ -98,14 +135,17 @@ function getWriterOpts() {
 
       // remove references that already appear in the subject
       commit.references = commit.references.filter((reference) => {
-        if (issues.indexOf(reference.issue) === -1) {
-          return true;
-        }
-
-        return false;
+        return issues.indexOf(reference.issue) === -1;
       });
 
       return commit;
     },
   };
+}
+
+function defaultConfig(config) {
+  config = config || {};
+  config.types = config.types || [`feat`, `fix`, `perf`, `revert`];
+
+  return config;
 }

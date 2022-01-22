@@ -101,9 +101,12 @@ betterThanBefore.setups([
       `This reverts commit 5678.`,
     ]);
   },
+  function () {
+    gitDummyCommit(`docs(website): add a new page in the website`);
+  },
 ]);
 
-describe(`angular preset`, function () {
+describe(`Sonia preset`, function () {
   it(`should work if there is no semver tag`, function (done) {
     preparing(1);
 
@@ -131,7 +134,7 @@ describe(`angular preset`, function () {
           expect(chunk).to.include(`**compile:** The Change is huge.`);
           expect(chunk).to.include(`Build System`);
           expect(chunk).to.include(`Continuous Integration`);
-          expect(chunk).to.include(`Features`);
+          expect(chunk).to.include(`:rocket: Features`);
           expect(chunk).to.include(`Bug Fixes`);
           expect(chunk).to.include(`Performance Improvements`);
           expect(chunk).to.include(`Reverts`);
@@ -448,6 +451,26 @@ describe(`angular preset`, function () {
           chunk = chunk.toString();
           expect(chunk).to.match(/custom revert format/);
           expect(chunk).to.match(/default revert format/);
+          done();
+        })
+      );
+  });
+
+  it(`should display the docs commits when the preset config is configured to allow docs commit to be generated`, function (done) {
+    preparing(10);
+
+    conventionalChangelogCore({
+      config: require(`../`)({
+        types: [`docs`],
+      }),
+    })
+      .on(`error`, function (err) {
+        done(err);
+      })
+      .pipe(
+        through(function (chunk) {
+          chunk = chunk.toString();
+          expect(chunk).to.include(`:books: Documentation`);
           done();
         })
       );
