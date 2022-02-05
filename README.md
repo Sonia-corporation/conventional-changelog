@@ -32,6 +32,38 @@ Based on [conventional-changelog-angular](https://github.com/conventional-change
 
 - Emojis in front of the section titles
 - Display the commit's body
+- Filter which type of commits should appear
+
+### Filtering which type of commits should appear
+
+You can define which type of commit should appear in your changelog.  
+To do that, pass the `types` option to the `presetConfig` with the list of commit types.
+
+**Example:**
+
+```
+[
+      "@semantic-release/release-notes-generator",
+      {
+        "config": "@sonia-corporation/conventional-changelog",
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+        },
+        "writerOpts": {
+          "commitsSort": ["subject", "scope"],
+          "owner": "C0ZEN"
+        },
+        "linkCompare": true,
+        "linkReferences": true,
+        "includeDetails": true,
+        "commit": "commit",
+        "issue": "issues",
+        "presetConfig": {
+          "types": ["feat", "fix", "perf", "docs", "revert"]
+        }
+      }
+    ],
+```
 
 ## Contributing
 

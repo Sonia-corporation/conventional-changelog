@@ -110,6 +110,7 @@ function getWriterOpts(config) {
         let url = context.repository
           ? `${context.host}/${context.owner}/${context.repository}`
           : context.repoUrl;
+
         if (url) {
           url = `${url}/issues/`;
           // Issue URLs.
@@ -118,6 +119,7 @@ function getWriterOpts(config) {
             return `[#${issue}](${url}${issue})`;
           });
         }
+
         if (context.host) {
           // User URLs.
           commit.subject = commit.subject.replace(
