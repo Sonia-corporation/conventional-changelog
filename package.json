@@ -74,6 +74,7 @@
     "commitmsg": "cz-customizable-ghooks",
     "cz": "git add . && git-cz && npm run git:push",
     "semver": "semantic-release",
+    "semver:dry-run": "semantic-release --dry-run",
     "commit": "npm run cz",
     "git:push": "git push-upstream"
   },
