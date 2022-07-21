@@ -109,7 +109,7 @@
     "lint-staged": "11.2.3",
     "mocha": "8.0.1",
     "prettier": "2.1.1",
-    "semantic-release": "17.1.1",
+    "semantic-release": "18.0.1",
     "shelljs": "0.8.5",
     "through2": "4.0.2",
     "ts-auto-mock": "2.3.5",
