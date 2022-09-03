@@ -94,7 +94,7 @@
     "chai": "4.2.0",
     "commitizen": "4.2.1",
     "conventional-changelog-core": "4.2.4",
-    "cz-customizable": "6.3.0",
+    "cz-customizable": "7.0.0",
     "cz-customizable-ghooks": "2.0.0",
     "eslint": "7.10.0",
     "eslint-config-google": "0.14.0",
