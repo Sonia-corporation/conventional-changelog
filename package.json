@@ -45,7 +45,7 @@
     }
   },
   "engines": {
-    "npm": "7.24.2"
+    "npm": "10.5.0"
   },
   "private": false,
   "files": [
